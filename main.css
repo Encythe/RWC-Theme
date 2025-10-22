@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Roblox World Championship
-@version      20251022.15.57
+@version      20251022.16.03
 @namespace    https://userstyles.world/user/Encythe
 @description  A heartful style tribute to TETR.IO World Championship
 @author       Encythe
@@ -2238,11 +2238,17 @@ h1:has(.avatar-card-fullbody),
 /* 	z-index: 1; */
 /* 	border-radius: 0 !important; */
 	position: relative;
-/* 	background: none !important; */
+	background: none !important;
 }
 
 .player-action {
 	z-index: 1;
+}
+
+.friend-presence-info>[class*="btn"] {
+	background: hsl(var(--element-bg)) !important;
+	clip-path: var(--quarter-poly);
+	border-radius: 0
 }
 
 [class*="btn-primary"]::before,
