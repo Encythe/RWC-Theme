@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name         Roblox World Championship
+@version      20251022.09.43
+@namespace    https://userstyles.world/user/Encythe
+@description  A heartful style tribute to TETR.IO World Championship
+@author       Encythe
+@license      CC BY-NC 4.0
+==/UserStyle== */
+
 /* 
 	Encythe's "Roblox World Championship" Theme 
 
@@ -29,7 +38,7 @@
 }
 }
 
-@-moz-document domain("roblox.com") {
+@-moz-document domain("www.roblox.com") {
 /*
 	Customizable Roblox by 33KK // Encythe's active configuration dump
 	
@@ -617,7 +626,7 @@ svg.fa:hover
 }
 }
 
-@-moz-document domain("roblox.com") {
+@-moz-document domain("www.roblox.com") {
 /* Actual code */
 :root {
 	--twopoly: polygon(2rem 0, 100% 0, calc(100% - 2rem) 100%, 0 100%);
