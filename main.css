@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Roblox World Championship
-@version      20251022.16.03
+@version      20251022.17.03
 @namespace    https://userstyles.world/user/Encythe
 @description  A heartful style tribute to TETR.IO World Championship
 @author       Encythe
@@ -1874,10 +1874,6 @@ svg.fa:hover
 	--element-selected: var(--GLOBAL-HUE), var(--GLOBAL-SAT), 32%;
 }
 
-/* .rbx-tab {
-	width: revert !important;
-	border-radius: 10px !important;
-} */
 .rbx-tab.active
 {
 	--container-transparency: var(--button) !important;
@@ -2265,10 +2261,6 @@ h1:has(.avatar-card-fullbody),
 	z-index: -1 !important;
 }
 
-/* 
-<button type="button" class="btn-growth-sm btn-full-width">Join</button>
-*/
-
 [class*="btn-primary"]::before,
 [class*="btn-secondary"]:hover::before,
 [class*="btn-growth"]:hover::before,
@@ -2287,7 +2279,9 @@ input[type*="text"],
 textarea,
 [class*="message-piece"],
 #navbar-search-input,
-.dropdown-menu * {
+.dropdown-menu *,
+.text-preview, .text-subheader, .text-subject,
+#rbx-message-detail-subject, .message-detail-body * {
 	text-transform: none !important;
 }
 
