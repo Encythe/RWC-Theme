@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Roblox World Championship
-@version      20251022.15.00
+@version      20251022.15.28
 @namespace    https://userstyles.world/user/Encythe
 @description  A heartful style tribute to TETR.IO World Championship
 @author       Encythe
@@ -50,6 +50,7 @@
 
 	https://creativecommons.org/licenses/by-nc/4.0/
 */
+
 :root
 {
 	--text: hsl(var(--GLOBAL-HUE), var(--GLOBAL-SAT), 95%);
@@ -2229,15 +2230,19 @@ h1:has(.avatar-card-fullbody),
 /* Buttons in general */
 [class*="btn-primary"],
 [class*="btn-secondary"],
-[class*="btn-growth"]
+[class*="btn-growth"],
+[class*="dropdown"],
+[class*="input-field"]
 {
 	position: relative;
-	--button: hsl(var(--element-bg));
+	--button: transparent;
 }
 
 [class*="btn-primary"]::before,
 [class*="btn-secondary"]::before,
-[class*="btn-growth"]::before
+[class*="btn-growth"]::before,
+[class*="dropdown"]::before,
+[class*="input-field"]::before
 {
 	content: "";
 	position: absolute;
@@ -2259,6 +2264,15 @@ img
 {
 	background: transparent !important;
 }
+
+input[type*="text"],
+textarea,
+[class*="message-piece"],
+#navbar-search-input,
+.dropdown-menu * {
+	text-transform: none !important;
+}
+
 
 /* Hell */
 .btn-control-xs:hover:not(.disabled),
