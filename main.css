@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Roblox World Championship
-@version      20251022.15.28
+@version      20251022.15.57
 @namespace    https://userstyles.world/user/Encythe
 @description  A heartful style tribute to TETR.IO World Championship
 @author       Encythe
@@ -615,7 +615,8 @@ textarea,
 .toggle-toc,
 .select-kit-body,
 #navbar-search-input,
-.carousel-control
+.carousel-control,
+.friend-tile-dropdown
 {
 	background: var(--button) !important;
 	background-image: none !important;
@@ -2234,8 +2235,14 @@ h1:has(.avatar-card-fullbody),
 [class*="dropdown"],
 [class*="input-field"]
 {
+/* 	z-index: 1; */
+/* 	border-radius: 0 !important; */
 	position: relative;
-	--button: transparent;
+/* 	background: none !important; */
+}
+
+.player-action {
+	z-index: 1;
 }
 
 [class*="btn-primary"]::before,
@@ -2249,14 +2256,19 @@ h1:has(.avatar-card-fullbody),
 	inset: 0;
 	background: hsl(var(--element-bg));
 	clip-path: var(--quarter-poly);
-	z-index: -1;
+	z-index: -1 !important;
 }
+
+/* 
+<button type="button" class="btn-growth-sm btn-full-width">Join</button>
+*/
 
 [class*="btn-primary"]::before,
 [class*="btn-secondary"]:hover::before,
-[class*="btn-growth"]:hover::before
+[class*="btn-growth"]:hover::before,
+button
 {
-	background: var(--element-selected);
+	background: hsl(var(--element-selected));
 }
 
 /* Global Stuff */
