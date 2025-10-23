@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Roblox World Championship
-@version      20251023.07.43
+@version      20251023.08.56
 @namespace    https://userstyles.world/user/Encythe
 @description  A heartful style tribute to TETR.IO World Championship
 @author       Encythe
@@ -1911,6 +1911,10 @@ svg.fa:hover
 	margin: 0 0.5rem !important;
 }
 
+.navbar-brand {
+	margin: 0 4px !important;
+}
+
 
 /* Navigation Bar - Right */
 .navbar-right>li
@@ -1977,7 +1981,8 @@ li.buttontooltip,
 /* Navigation Bar - Left */
 ul.rbx-navbar
 {
-	margin: 0 !important;
+	margin: 0 0 2px 0 !important;
+	align-items: start;
 }
 
 .rbx-navbar>li
@@ -2009,7 +2014,13 @@ ul.rbx-navbar
 
 	.rbx-navbar
 	{
-		padding-left: 0.5rem !important;
+		padding-left: 8px !important;
+	}
+}
+
+@media (min-width: 1688px) {
+	.rbx-header .rbx-navbar-header {
+		width: revert;
 	}
 }
 
@@ -2239,7 +2250,6 @@ h1:has(.avatar-card-fullbody),
 
 [class*="dropdown"] {
 	background: none !important;
-/* 	position: relative !important; */
 	border-radius: 0 !important;
 }
 
@@ -2253,7 +2263,8 @@ h1:has(.avatar-card-fullbody),
 	border-radius: 0
 }
 
-.dropdown-backdrop {
+.dropdown-backdrop,
+#navbar-stream {
 	display:none;
 }
 
@@ -2292,7 +2303,8 @@ textarea,
 #navbar-search-input,
 /* .dropdown-menu *, */
 .text-preview, .text-subheader, .text-subject,
-#rbx-message-detail-subject, .message-detail-body * {
+#rbx-message-detail-subject, .message-detail-body *,
+.text-info {
 	text-transform: none !important;
 }
 
