@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Roblox World Championship
-@version      20251023.09.38
+@version      20251102.23.20
 @namespace    https://userstyles.world/user/Encythe
 @description  A heartful style tribute to TETR.IO World Championship
 @author       Encythe
@@ -618,7 +618,6 @@ textarea,
 .carousel-control,
 .friend-tile-dropdown
 {
-	background: var(--button) !important;
 	background-image: none !important;
 	color: var(--text) !important;
 	border-color: transparent !important;
@@ -701,7 +700,6 @@ a.btn-common-play-game-lg:hover:not(.disabled),
 .char-friend *,
 .indicated-message-bubble,
 .dialog-input-container .dialog-input,
-.link-card-msg-wrap,
 .link-card-container,
 .verticaltab.selected a,
 .verticaltab.selected,
@@ -1943,6 +1941,10 @@ svg.fa:hover
 	margin: 0 !important;
 }
 
+.age-bracket-label.text-header {
+	display: none !important;
+}
+
 li.buttontooltip,
 .icon-actions-clear-sm,
 .buy-robux,
@@ -2179,9 +2181,19 @@ h1:has(.avatar-card-fullbody),
 	inset: 0;
 	background: linear-gradient(to top,
 	hsl(var(--element-bg)) 0%,
-	#00000000 100%);
+	transparent 100%);
 	clip-path: var(--poly);
 	z-index: -1;
+}
+
+.thumbnail-2d-container.friend-tile-game-card {
+	width:100px;
+	height:100px;
+	background-color: hsl(var(--element-bg)) !important;
+}
+
+.friend-tile-dropdown {
+	background-color: hsl(var(--element-bg)) !important;
 }
 
 /* Some other stuff */
@@ -2240,7 +2252,8 @@ h1:has(.avatar-card-fullbody),
 [class*="btn-primary"],
 [class*="btn-secondary"],
 [class*="btn-growth"],
-[class*="input-field"],
+[class*="btn-control"],
+[class*="input-field"]:not(input), /* Not a literal input field */
 .dropdown-menu>li>a
 {
 	border-radius: 0 !important;
@@ -2248,8 +2261,14 @@ h1:has(.avatar-card-fullbody),
 	background: none !important;
 }
 
+[class*="input-field"]:is(input) {
+	background: hsl(var(--element-bg)) !important;
+	clip-path: var(--quarter-poly);
+	border-radius: 0 !important;
+}
 
-[class*="dropdown"] {
+
+[class^="dropdown"] {
 	background: none !important;
 	border-radius: 0 !important;
 }
@@ -2272,7 +2291,8 @@ h1:has(.avatar-card-fullbody),
 [class*="btn-primary"]::before,
 [class*="btn-secondary"]::before,
 [class*="btn-growth"]::before,
-[class*="dropdown"]::before,
+[class*="btn-control"]::before,
+[class^="dropdown"]::before,
 [class*="input-field"]::before,
 .dropdown-menu>li>a::before
 {
@@ -2307,6 +2327,10 @@ textarea,
 #rbx-message-detail-subject, .message-detail-body *,
 .text-info {
 	text-transform: none !important;
+}
+
+.bg-none {
+	background-color: hsl(var(--element-bg));
 }
 
 
@@ -2373,8 +2397,7 @@ a.btn-common-play-game-lg:hover:not(.disabled),
 .main-btn:hover:not(.disabled),
 .toggle-toc:hover:not(.disabled),
 .select-kit-body:hover:not(.disabled),
-.assetTypeFilter:hover:not(.disabled),
-.dialog-message
+.assetTypeFilter:hover:not(.disabled)
 {
 	background: transparent !important;
 }
